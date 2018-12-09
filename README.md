@@ -1,12 +1,13 @@
-### Notis.js
+## Notis.js
 Lightweigth, fully customizable, no dependencies, notification system library (gzip < 1 kb)
-
+#### Demo
+[Demo page](https://buzinin.github.io/notis.js/ "Demo page")
 #### Browser support
 The minimum supported version
 
 | IE | Edge         | Chrome | Firefox | Safari |
 |----|--------------|--------|---------|--------|
-| 10 | All versions | 60     | 53      |   9.1  |
+| 10 | All version | 60     | 53      |   9.1  |
 
 #### Options
 

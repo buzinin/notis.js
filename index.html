@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Notification javascript library - lightweigth, fully customizable, no dependencies">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+  <link rel="stylesheet" href="dist/notis.css">
+  <link rel="stylesheet" href="demo/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+  <title>Notis.js Notifications system </title>
+</head>
+<body>
+<section class="main">
+  <div class="main-info container">
+    <h1 class="main-title">Notis.js</h1>
+    <p class="main-subtitle">Notifications system (gzipped size < 1 kb)</p>
+    <p class="main-subtitle">Lightweigth, fully customizable, no dependencies</p>
+    <div class="main-btns">
+      <button class="btn btn--success">success</button>
+      <button class="btn">info</button>
+      <button class="btn btn--warn">warn</button>
+      <button class="btn btn--error">error</button>
+    </div>
+    <div class="main-links">
+      <a href="#demo">Demo</a>
+      <a href="#options">Docs</a>
+    </div>
+  </div>
+</section>
+<section class="options" id="options">
+  <div class="container">
+    <h2>Options</h2>
+
+    <div class="table">
+      <div class="head row">
+        <div class="cell">Option</div>
+        <div class="cell">Type</div>
+        <div class="cell">Default</div>
+        <div class="cell">Description</div>
+      </div>
+      <div class="row">
+        <div class="cell">type <br><span class="type">type: String</span></div>
+        <div class="cell">String</div>
+        <div class="cell">'success'</div>
+        <div class="cell">Four types of notifications by default <span>('success', 'info', 'warn', 'error')</span>.
+          You can set
+          your type.
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">position <br><span class="type">type: String</span></div>
+        <div class="cell">String</div>
+        <div class="cell">'top-right'</div>
+        <div class="cell">Position of the notification element
+          <span>('top-right', 'bottom-right', 'bottom-left', 'top-left')</span>.
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">duration <br><span class="type">type: Integer</span></div>
+        <div class="cell">Integer</div>
+        <div class="cell">7000</div>
+        <div class="cell">Delay for closing notification in milliseconds (ms).
+          <br>E.g. <span>10000</span>.
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">width <br><span class="type">type: Integer</span></div>
+        <div class="cell">Integer</div>
+        <div class="cell">300</div>
+        <div class="cell">Width (<span>px</span>) of the notification element
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">indentY <br><span class="type">type: Integer</span></div>
+        <div class="cell">Integer</div>
+        <div class="cell">20</div>
+        <div class="cell">E.g Vertical indent for notification element.
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">indentX <br><span class="type">type: Integer</span></div>
+        <div class="cell">Integer</div>
+        <div class="cell">20</div>
+        <div class="cell">E.g Horizontal iindent for notification element.
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">close <br><span class="type">type: Boolean</span></div>
+        <div class="cell">Boolean</div>
+        <div class="cell">false</div>
+        <div class="cell">Close by click on the notification element.
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">closeBtnclose <br><span class="type">type: Boolean</span></div>
+        <div class="cell">Boolean</div>
+        <div class="cell">true</div>
+        <div class="cell">Show close button.
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">showAnimationclose <br><span class="type">type: String or Boolean</span></div>
+        <div class="cell">String or Boolean</div>
+        <div class="cell"><span>(empty string)</span></div>
+        <div class="cell">You can add and use animate.css class names or your custom css animations as well.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="options-example">
+  <div class="container">
+    <h2>Options example</h2>
+    <div class="preview preview-js">
+   <pre><span class="var">const</span> config = {
+    <span class="key">type</span>: <span class="str">'success'</span>,
+    <span class="key">position</span>: <span class="str">'top-right'</span>,
+    <span class="key">duration</span>: <span class="num">6000</span>,
+    <span class="key">width</span>: <span class="num">300</span>,
+    <span class="key">indentY</span>: <span class="num">25</span>,
+    <span class="key">indentX</span>: <span class="num">25</span>,
+    <span class="key">close</span>: <span class="boolean">false</span>,
+    <span class="key">closeBtn</span>: <span class="boolean">true</span>,
+  };</pre>
+    </div>
+  </div>
+</section>
+
+<section class="demo" id="demo">
+  <div class="container">
+    <h2>Demo</h2>
+    <div class="demo-item">
+      <div class="demo-item__title">Notification with default config</div>
+      <div class="preview preview-js">
+        <pre><span class="key">notis</span><span class="func">.show</span>(<span class="str">'Hello'</span>);</pre>
+      </div>
+      <div class="btn btn--info demo-1">Show</div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-item__title">Notification with 'warn' type option</div>
+      <div class="preview preview-js">
+<pre><span class="key">notis</span><span class="func">.show</span>(<span class="str">'Warn notification'</span>, {
+  <span class="key">type</span>: <span class="str">'warn'</span>
+});</pre>
+      </div>
+      <div class="btn btn--info demo-2">Show</div>
+    </div>
+
+
+  </div>
+</section>
+
+<footer class=" footer container">
+  <div class="more">2018 Licensed as MIT</div>
+</footer>
+
+<script src="dist/notis.js"></script>
+<script>
+
+
+  var btns = document.getElementsByTagName('button');
+
+  btns[0].addEventListener('click', function () {
+    notis.show('success text', {
+      showAnimation: 'animated bounceInRight fast',
+      beforeCreate: function (el) {
+      },
+      beforeDestroy: function (el) {
+        console.log('destroy');
+      }
+    });
+  });
+
+  btns[1].addEventListener('click', function () {
+    notis.show('info text', {
+      showAnimation: 'animated bounceInRight fast'
+    });
+  });
+
+  btns[2].addEventListener('click', function () {
+    notis.show('type warn', {type: 'warn', position: 'bottom-right', showAnimation: 'animated bounceInRight fast'});
+  });
+
+  btns[3].addEventListener('click', function () {
+    notis.show('type error', {type: 'error', position: 'top-left', showAnimation: 'animated bounceInLeft fast'});
+  });
+
+  document.querySelector('.demo-1').addEventListener('click', function () {
+    notis.show('Hello');
+  });
+
+  document.querySelector('.demo-2').addEventListener('click', function () {
+    notis.show('Warn notification', {
+      type: 'warn'
+    });
+  });
+
+
+</script>
+</body>
+</html>

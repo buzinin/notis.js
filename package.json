@@ -1,0 +1,23 @@
+{
+  "name": "notis.js",
+  "version": "1.0.0",
+  "description": "Lightweight notifications library",
+  "main": "dist/notis.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "size": "size-limit",
+    "minify": "uglifyjs src/index.js -c -m -o dist/notis.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "size-limit": "^0.20.1",
+    "uglify-js": "^3.4.9"
+  },
+  "size-limit": [
+    {
+      "path": "./src/index.js"
+    }
+  ]
+}

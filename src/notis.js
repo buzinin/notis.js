@@ -15,10 +15,6 @@
 }(this, function () {
     'use strict';
 
-    //Todo text param convert toString
-    //TODO get margin from css
-    //TODO Set width to notification
-
     var defaultConfig = {
       type: 'success',
       duration: 6000,
@@ -80,7 +76,7 @@
 
       this.addCloseBtn = function () {
         if (!config.closeBtn) return;
-        var btn = document.createElement('div');
+        var btn = document.createElement('button');
         btn.className = 'notis__close';
         btn.onclick = this.notis.destroy;
 

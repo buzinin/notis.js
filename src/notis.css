@@ -19,6 +19,9 @@
   top: calc(50% - 7px);
   right: 10px;
   cursor: pointer;
+  border: none;
+  height: 14px;
+  background-color: transparent;
 }
 
 .notis__close::before {
